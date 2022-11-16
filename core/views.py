@@ -18,5 +18,16 @@ class ArticleListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(ArticleListView, self).get_context_data(**kwargs)
         context["articles"] = Article.objects.all()
+        context["images"] = Image.objects.all()
         
+        return context
+
+class ArticleDetailView(DeleteView):
+    template_name = "article_detail.html"
+    model = Article
+
+    def get_context_data(self, **kwargs):
+        context = super(ArticleDetailView, self).get_context_data(**kwargs)
+        context["articles"] = Article.objects.all()
+
         return context

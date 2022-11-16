@@ -17670,3 +17670,18 @@ a.purchase-btn:hover {
   border: 2px solid #fff;
   color: #fff;
 }
+
+
+/* --- SIDE BAR --- */
+
+
+aside {
+  width: 100%;
+  padding: 15px;
+  margin: 15px;
+  /* float: right; */
+  background-color: lightgray;
+
+}
+
+

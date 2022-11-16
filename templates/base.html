@@ -10,11 +10,11 @@
     <!-- CSS
 	============================================ -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/vendor/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/vendor/fontawesome.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/vendor/lightbox.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/plugins/plugins.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/lightbox.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/plugins.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
 
@@ -23,6 +23,11 @@
     {% endblock title %}
 
 </head>
+
+{% include "navbar.html" %}
+{% comment %} {% include "sidebar.html" %} {% endcomment %}
+
+{% comment %} <body style=""dir="rtl"> {% endcomment %}
 <body>
 
 
@@ -30,24 +35,26 @@
 
 {% endblock content %}
 
+{% include "footer.html" %}
 
-    {% comment %} <!-- JS
+
+    <!-- JS
 ============================================ -->
     <!-- Modernizer JS -->
-    <script src="assets/js/vendor/modernizr.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr.min.js' %}"></script>
     <!-- jQuery JS -->
-    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
     <!-- Bootstrap JS -->
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/stellar.js"></script>
-    <script src="assets/js/vendor/particles.js"></script>
-    <script src="assets/js/vendor/masonry.js"></script>
-    <script src="assets/js/vendor/stickysidebar.js"></script>
-    <script src="assets/js/vendor/contactform.js"></script>
-    <script src="assets/js/plugins/plugins.min.js"></script>
-    {% endcomment %}
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/vendor/stellar.js' %}"></script>
+    <script src="{% static 'js/vendor/particles.js' %}"></script>
+    <script src="{% static 'js/vendor/masonry.js' %}"></script>
+    <script src="{% static 'js/vendor/stickysidebar.js' %}"></script>
+    <script src="{% static 'js/vendor/contactform.js' %}"></script>
+    <script src="{% static 'js/plugins/plugins.min.js' %}"></script>
+    
     <!-- Main JS -->
-    <script src="{% static 'assets/js/main.js' %}"></script> 
+    <script src="{% static 'js/main.js' %}"></script> 
 
 </body>
 </html>
