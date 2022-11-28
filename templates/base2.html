@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    {% comment %} STELLA TEMPLATE {% endcomment %}
+        <!-- Stylesheets -->
+        <link href="{% static 'stella/css/bootstrap.css' %}" rel="stylesheet">
+        <link href="{% static 'stella/css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'stella/css/responsive.css' %}" rel="stylesheet">
+
+        <link rel="shortcut icon" href="{% static 'stella/images/favicon.png' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'stella/images/favicon.png' %}" type="image/x-icon">
+
+        <!-- Responsive -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+
+    {% block title %}
+    <title>Sport News</title>
+    {% endblock title %}
+
+</head>
+
+{% include "navbar2.html" %}
+
+{% comment %} <body style=""dir="rtl"> {% endcomment %}
+<body >
+
+
+{% block content %}
+
+{% endblock content %}
+
+{% include "footer2.html" %}
+
+
+
+    {% comment %} STELLA TEMPLATE JS {% endcomment %}
+        <script src="{% static 'stella/js/jquery.js' %}"></script>
+        <script src="{% static 'stella/js/popper.min.js' %}"></script>
+        <script src="{% static 'stella/js/jquery-ui.js' %}"></script>
+        <script src="{% static 'stella/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'stella/js/jquery.fancybox.js' %}"></script>
+        <script src="{% static 'stella/js/owl.js' %}"></script>
+        <script src="{% static 'stella/js/wow.js' %}"></script>
+        <script src="{% static 'stella/js/validate.js' %}"></script>
+        <script src="{% static 'stella/js/appear.js' %}"></script>
+        <script src="{% static 'stella/js/scrollbar.js' %}"></script>
+        <script src="{% static 'stella/js/script.js' %}"></script>
+
+
+
+</body>
+</html>

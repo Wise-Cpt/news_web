@@ -1,6 +1,6 @@
 from django.db import models
 from tinymce import models as tinymce_models
-
+from django.urls import reverse
 
 
 # Create your models here.
@@ -20,6 +20,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
 
 
 class Article(models.Model):
@@ -34,3 +35,9 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('core:articledetail', kwargs={'pk': self.pk})
+
+    def get_absolute2_url(self):
+        return reverse('core:article2detail', kwargs={'pk': self.pk})
